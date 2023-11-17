@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Home</title>
+</head>
+<style>
+    /* Reset some default browser styles */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the container */
+.container {
+    background-color: #ebe1e6;
+    padding: 10px;
+    margin: 10% 40%;
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Style the buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Primary button style */
+.btn-primary {
+    background-color: #007bff; /* Blue color, you can change this */
+}
+
+/* Change button style on hover */
+.btn:hover {
+    opacity: 0.8;
+    background-color: aqua;
+    color: black;
+    font-size: larger;
+    font-weight: 700;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 10% 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 10% 5%;
+    }
+}
+</style>
+<body>
+    <h3>Welcome, </h3>
+        <div class="container">
+            <a class="btn btn-primary" href="petroldata.html" role="button">Petrol</a>
+            <a class="btn btn-primary" href="dieseldata.html" role="button">Diesel</a>
+        </div>
+
+        <div id="petrolDataContainer" style="display: none;">
+            <!-- Your petrol data display logic here -->
+            <h2>Petrol Data</h2>
+            <div id="displayData"></div>
+        </div>
+        <div id="dieselDataContainer" style="display: none;">
+            <!-- Your petrol data display logic here -->
+            <h2>Diesel Data</h2>
+            <div id="displayData"></div>
+        </div>
+        <script>
+            function showPetrolData() {
+                // You can fetch and display the petrol data using AJAX or other methods here
+                // For now, let's just show the container
+                document.getElementById("petrolDataContainer").style.display = "block";
+            }
+            function showDieselData() {
+                // You can fetch and display the petrol data using AJAX or other methods here
+                // For now, let's just show the container
+                document.getElementById("dieselDataContainer").style.display = "block";
+            }
+        </script>
+</body>
+</html>
